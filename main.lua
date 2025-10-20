@@ -1,9 +1,12 @@
 function love.load()
+	cat = love.graphics.newImage("assets/cat.png");
 	x = 0
 	y = 0
 end
 
 function love.update(dt)
+	x = x + 10 * dt
+	y = y + 10 * dt
 	love.window.setPosition(x, y)
 end
 
@@ -24,4 +27,5 @@ function love.keypressed(key)
 end
 
 function love.draw()
+	love.graphics.draw(cat, 0, 0)
 end
